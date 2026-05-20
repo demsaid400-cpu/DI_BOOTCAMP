@@ -1,0 +1,40 @@
+# =========================
+# Challenge 1
+# =========================
+
+def list_of_multiples(number, length):
+    multiples = []
+
+    for i in range(1, length + 1):
+        multiples.append(number * i)
+
+    return multiples
+
+
+# Ask the user for a number and a length
+number = int(input("Enter a number: "))
+length = int(input("Enter the length: "))
+
+# Print the list of multiples
+print(list_of_multiples(number, length))
+
+
+# =========================
+# Challenge 2
+# =========================
+
+def remove_consecutive_duplicates(word):
+    new_word = ""
+
+    for char in word:
+        if new_word == "" or char != new_word[-1]:
+            new_word += char
+
+    return new_word
+
+
+# Ask the user for a word
+user_word = input("Enter a word: ")
+
+# Print the word without consecutive duplicate letters
+print(remove_consecutive_duplicates(user_word))
